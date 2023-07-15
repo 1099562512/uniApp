@@ -2,11 +2,11 @@
 const uni_modules_vkUviewUi_libs_function_timeFormat = require("./timeFormat.js");
 function timeFrom(dateTime = null, format = "yyyy-mm-dd") {
   if (!dateTime)
-    dateTime = Number(new Date());
+    dateTime = Number(/* @__PURE__ */ new Date());
   if (dateTime.toString().length == 10)
     dateTime *= 1e3;
   let timestamp = +new Date(Number(dateTime));
-  let timer = (Number(new Date()) - timestamp) / 1e3;
+  let timer = (Number(/* @__PURE__ */ new Date()) - timestamp) / 1e3;
   let tips = "";
   switch (true) {
     case timer < 300:

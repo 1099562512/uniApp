@@ -37,7 +37,7 @@
         "pagePath": "pages/home2/home2",
         "text": "股票",
         "iconPath": "static/股票1.png",
-        "selectedIconPath": "static/股票.png"
+        "selectedIconPath": "static/股票1.png"
       }
     ]
   },

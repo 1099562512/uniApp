@@ -1,5 +1,5 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -60,7 +60,7 @@
 				"pagePath": "pages/home2/home2",
 				"text": "股票",
 				"iconPath": "static/股票1.png",
-				"selectedIconPath": "static/股票.png"
+				"selectedIconPath": "static/股票1.png"
 			}
 		]
 	},
