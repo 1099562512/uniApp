@@ -439,6 +439,33 @@ export default {
 			// 格式化时间，在IE浏览器(uni不存在此情况)，无法识别日期间的"-"间隔符号
 			let fdate = this.defaultTime.replace(/\-/g, "/");
 			fdate = fdate && fdate.indexOf("/") == -1 ? `2020/01/01 ${fdate}` : fdate;
+			
+			// 时间字符串处理开始-----------------------------------------------------------
+			// ios对时间格式有严格要求，2020/01 这样的格式无法正常转时间，必须是2020/01/01 00:00:00 这样的格式
+			let arr1 = fdate.split(" ");
+			let arr1_1 = arr1[0] || "";
+			let arr1_2 = arr1[1] || "";
+			let arr2;
+			if (arr1_1.indexOf("-") > -1) {
+				arr2 = arr1_1.split("-");
+			} else {
+				arr2 = arr1_1.split("/");
+			}
+			let arr3 = arr1_2.split(":");
+			let dateObj = {
+				year: Number(arr2[0]),
+				month: Number(arr2[1]) || 1,
+				day: Number(arr2[2]) || 1,
+				hour: Number(arr3[0]) || 0,
+				minute: Number(arr3[1]) || 0,
+				second: Number(arr3[2]) || 0,
+			};
+			for (let key in dateObj) {
+				if (dateObj[key] >= 0 && dateObj[key] < 10) dateObj[key] = `0${dateObj[key]}`;
+			}
+			fdate = `${dateObj.year}/${dateObj.month}/${dateObj.day} ${dateObj.hour}:${dateObj.minute}:${dateObj.second}`;
+			// 时间字符串处理结束-----------------------------------------------------------
+			
 			let time = null;
 			if (fdate) time = new Date(fdate);
 			else time = new Date();

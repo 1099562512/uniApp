@@ -17,8 +17,7 @@
 		<!-- <image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{name}}</text>
-		</view>-->
-		
+		</view> -->
 	</view>
 </template>
 
@@ -44,7 +43,7 @@
 	}) */
 </script>
 
-<style>
+<style lang="scss">
 	.content {
 		display: flex;
 		flex-direction: column;

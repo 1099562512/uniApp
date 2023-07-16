@@ -117,6 +117,26 @@ function object(value) {
 function code(value, len = 6) {
   return new RegExp(`^\\d{${len}}$`).test(value);
 }
+function func(value) {
+  return typeof value === "function";
+}
+function promise(value) {
+  return object(value) && func(value.then) && func(value.catch);
+}
+function image(value) {
+  const newValue = value.split("?")[0];
+  return new RegExp(/\.(jpeg|jpg|gif|png|svg|webp|jfif|bmp|dpg)$/).test(newValue);
+}
+function video(value) {
+  const newValue = value.split("?")[0];
+  return new RegExp(/\.(mp4|mpg|mpeg|dat|asf|avi|rm|rmvb|mov|wmv|flv|mkv|m3u8|3gp)$/).test(newValue);
+}
+function regExp(o) {
+  return o && Object.prototype.toString.call(o) === "[object RegExp]";
+}
+function string(value) {
+  return typeof value === "string";
+}
 const test = {
   email,
   mobile,
@@ -140,6 +160,12 @@ const test = {
   landline,
   object,
   array,
-  code
+  code,
+  func,
+  promise,
+  video,
+  image,
+  regExp,
+  string
 };
 exports.test = test;

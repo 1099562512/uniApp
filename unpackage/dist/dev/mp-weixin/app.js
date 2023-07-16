@@ -25,6 +25,7 @@ require("./uni_modules/vk-uview-ui/libs/function/_parent.js");
 require("./uni_modules/vk-uview-ui/libs/function/sys.js");
 require("./uni_modules/vk-uview-ui/libs/function/debounce.js");
 require("./uni_modules/vk-uview-ui/libs/function/throttle.js");
+require("./uni_modules/vk-uview-ui/libs/function/addStyle.js");
 require("./uni_modules/vk-uview-ui/libs/config/config.js");
 require("./uni_modules/vk-uview-ui/libs/config/zIndex.js");
 if (!Math) {

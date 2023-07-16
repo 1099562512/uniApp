@@ -23,6 +23,7 @@ const uni_modules_vkUviewUi_libs_function_$parent = require("./libs/function/_pa
 const uni_modules_vkUviewUi_libs_function_sys = require("./libs/function/sys.js");
 const uni_modules_vkUviewUi_libs_function_debounce = require("./libs/function/debounce.js");
 const uni_modules_vkUviewUi_libs_function_throttle = require("./libs/function/throttle.js");
+const uni_modules_vkUviewUi_libs_function_addStyle = require("./libs/function/addStyle.js");
 const uni_modules_vkUviewUi_libs_config_config = require("./libs/config/config.js");
 const uni_modules_vkUviewUi_libs_config_zIndex = require("./libs/config/zIndex.js");
 function wranning(str) {
@@ -67,7 +68,8 @@ const $u = {
   // uView配置信息相关，比如版本号
   zIndex: uni_modules_vkUviewUi_libs_config_zIndex.zIndex,
   debounce: uni_modules_vkUviewUi_libs_function_debounce.debounce,
-  throttle: uni_modules_vkUviewUi_libs_function_throttle.throttle
+  throttle: uni_modules_vkUviewUi_libs_function_throttle.throttle,
+  addStyle: uni_modules_vkUviewUi_libs_function_addStyle.addStyle
 };
 common_vendor.index.$u = $u;
 const install = (Vue) => {

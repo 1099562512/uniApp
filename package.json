@@ -5,8 +5,5 @@
   "main": "main.js",
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@dcloudio/uni-ui": "^1.4.28"
-  }
+  "license": "ISC"
 }
