@@ -1,6 +1,6 @@
 <template>
   <view class="content"> 
-		12
+		<switch checked></switch>
 	</view>
 </template>
 
