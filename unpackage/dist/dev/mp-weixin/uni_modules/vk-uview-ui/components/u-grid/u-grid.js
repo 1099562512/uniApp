@@ -79,5 +79,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     b: common_vendor.s($options.gridStyle)
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-897c440a"], ["__file", "D:/code/personal/uniApp/uni_modules/vk-uview-ui/components/u-grid/u-grid.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-897c440a"], ["__file", "D:/code/uniApp/uni_modules/vk-uview-ui/components/u-grid/u-grid.vue"]]);
 wx.createComponent(Component);

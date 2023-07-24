@@ -20,7 +20,7 @@ if (!String.prototype.padStart) {
 }
 function timeFormat(dateTime = null, fmt = "yyyy-mm-dd") {
   if (!dateTime)
-    dateTime = Number(/* @__PURE__ */ new Date());
+    dateTime = Number(new Date());
   if (dateTime.toString().length == 10)
     dateTime *= 1e3;
   let date = new Date(dateTime);
